@@ -13,7 +13,7 @@ class ClientApp{
 	public static void main(String[] args) {
 		
 		try{
-			s = new Socket("localhost", 1693);
+			s = new Socket("localhost", 6060);
 			dis = new DataInputStream(s.getInputStream());
 
 			JFrame frame = new JFrame("Client");
