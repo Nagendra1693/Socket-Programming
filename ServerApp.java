@@ -12,7 +12,7 @@ class ServerApp{
 	static JTextArea chatArea;
 	public static void main(String[] args) {
 		try{
-			ServerSocket ss = new ServerSocket(1693);
+			ServerSocket ss = new ServerSocket(6060);
 			s = ss.accept();
 
 			JFrame frame = new JFrame("Server");
