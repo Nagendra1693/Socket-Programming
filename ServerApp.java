@@ -13,7 +13,7 @@ class ServerApp{
 	public static void main(String[] args) {
 		try{
 			ServerSocket ss = new ServerSocket(6060);
-			s = ss.accept();
+// 			s = ss.accept();
 
 			JFrame frame = new JFrame("Server");
 
@@ -68,6 +68,8 @@ class ServerApp{
 			frame.setLayout(null);
 			frame.setVisible(true);
 
+			s = ss.accept();
+			
 			dis = new DataInputStream(s.getInputStream());
 			while(dis != null){
 				String msgIn = dis.readUTF();
@@ -77,7 +79,7 @@ class ServerApp{
 			
 
 			// s.close();
-			// ss.close();
+			ss.close();
 		} catch(Exception e ){ e.printStackTrace();}
 
 
